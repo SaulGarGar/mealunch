@@ -14,3 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "mealunch"
 include ':app'
+include ':domain:mealunch'
+include ':data:mealunch'
