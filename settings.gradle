@@ -4,6 +4,11 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+    plugins {
+        id 'com.google.dagger.hilt.android' version '2.44' apply false
+        id 'com.android.library' version '8.0.2'
+        id 'org.jetbrains.kotlin.android' version '1.8.20'
+    }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -14,3 +19,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "mealunch"
 include ':app'
+include ':data'
+include ':domain'
