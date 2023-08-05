@@ -1,4 +1,4 @@
-package com.saulgarcia.domainq
+package com.saulgarcia.domain
 
 import org.junit.Test
 

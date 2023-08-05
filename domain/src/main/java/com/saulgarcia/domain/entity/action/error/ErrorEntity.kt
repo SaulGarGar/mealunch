@@ -1,4 +1,4 @@
-package com.saulgarcia.domainq.entity.action.error
+package com.saulgarcia.domain.entity.action.error
 
 sealed interface ErrorEntity {
     data class NetworkError(val httpStatus: Int) : ErrorEntity

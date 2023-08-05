@@ -1,4 +1,4 @@
-package com.saulgarcia.dataq
+package com.saulgarcia.domain
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.saulgarcia.dataq.test", appContext.packageName)
+        assertEquals("com.saulgarcia.domainq.test", appContext.packageName)
     }
 }

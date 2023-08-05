@@ -1,5 +1,5 @@
-package com.saulgarcia.dataq.di
-import com.saulgarcia.dataq.remote.TheMealApiClient
+package com.saulgarcia.data.di
+import com.saulgarcia.data.remote.TheMealApiClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

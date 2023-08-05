@@ -1,4 +1,4 @@
-package com.saulgarcia.dataq
+package com.saulgarcia.data
 
 import org.junit.Test
 

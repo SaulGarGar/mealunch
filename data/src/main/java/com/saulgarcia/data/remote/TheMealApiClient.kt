@@ -1,6 +1,6 @@
-package com.saulgarcia.dataq.remote
+package com.saulgarcia.data.remote
 
-import com.saulgarcia.dataq.entity.MealsCategoryResponse
+import com.saulgarcia.data.entity.MealsCategoryResponse
 import retrofit2.Call
 import retrofit2.http.GET
 

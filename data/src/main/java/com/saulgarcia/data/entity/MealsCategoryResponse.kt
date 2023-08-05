@@ -1,4 +1,4 @@
-package com.saulgarcia.dataq.entity
+package com.saulgarcia.data.entity
 
 import com.google.gson.annotations.SerializedName
 

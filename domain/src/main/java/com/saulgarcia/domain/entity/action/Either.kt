@@ -1,6 +1,6 @@
-package com.saulgarcia.domainq.entity.action
+package com.saulgarcia.domain.entity.action
 
-import com.saulgarcia.domainq.entity.action.error.ErrorEntity
+import com.saulgarcia.domain.entity.action.error.ErrorEntity
 
 sealed interface Either {
     data class Success (private val data: Any) : Either {
