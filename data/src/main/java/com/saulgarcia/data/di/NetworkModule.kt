@@ -1,5 +1,7 @@
 package com.saulgarcia.data.di
 import com.saulgarcia.data.remote.TheMealApiClient
+import com.saulgarcia.data.repository.MealsCategoryRepositoryImpl
+import com.saulgarcia.domain.repository.MealsCategoryRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,7 +28,7 @@ object NetworkModule {
     @Provides
     fun providerTheMealRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://www.themealdb.com/api/json/v1/1")
+            .baseUrl("https://www.themealdb.com/api/json/v1/1/")
             .client(provideHttpClient())
             .addConverterFactory(GsonConverterFactory.create())
             .build()

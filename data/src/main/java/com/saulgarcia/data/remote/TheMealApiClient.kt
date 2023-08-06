@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface TheMealApiClient {
-    @GET("/categories.php")
+    @GET("categories.php")
     fun getMealCategories(): Call<MealsCategoryResponse>
 }
