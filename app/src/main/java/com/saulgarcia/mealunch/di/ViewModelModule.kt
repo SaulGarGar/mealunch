@@ -1,9 +1,11 @@
 package com.saulgarcia.mealunch.di
 
 import com.saulgarcia.domain.useCase.GetCategoriesUseCase
+import com.saulgarcia.domain.useCase.GetMealDetailsByIdUseCase
 import com.saulgarcia.domain.useCase.GetMealsUseCase
 import com.saulgarcia.mealunch.di.CoroutineScopeModule.provideIOCoroutineContext
 import com.saulgarcia.mealunch.features.categoryListView.CategoryListViewModel
+import com.saulgarcia.mealunch.features.mealDetailsView.MealDetailsViewModel
 import com.saulgarcia.mealunch.features.mealsListView.MealsListViewModel
 import dagger.Module
 import dagger.Provides
@@ -16,7 +18,7 @@ object ViewModelModule {
     @Provides
     fun provideCategoryListViewModel(
         getCategoriesUseCase: GetCategoriesUseCase
-        ): CategoryListViewModel {
+    ): CategoryListViewModel {
         return CategoryListViewModel(getCategoriesUseCase, provideIOCoroutineContext())
     }
 
@@ -25,5 +27,12 @@ object ViewModelModule {
         getMealsUseCase: GetMealsUseCase
     ): MealsListViewModel {
         return MealsListViewModel(getMealsUseCase, provideIOCoroutineContext())
+    }
+
+    @Provides
+    fun provideMealDetailsViewModel(
+        getMealDetailsByIdUseCase: GetMealDetailsByIdUseCase
+    ): MealDetailsViewModel {
+        return MealDetailsViewModel(getMealDetailsByIdUseCase, provideIOCoroutineContext())
     }
 }

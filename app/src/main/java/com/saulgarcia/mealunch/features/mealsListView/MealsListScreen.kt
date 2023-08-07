@@ -7,9 +7,11 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 
@@ -28,10 +30,12 @@ fun MealsListScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    categorySelected?.let {
-                        Text(text = it)
-                    } ?: Text("Meals")
-                }
+                    Text(categorySelected ?: "")
+                },
+                colors = TopAppBarDefaults.smallTopAppBarColors(
+                    containerColor = Color.DarkGray,
+                    titleContentColor = Color.White
+                )
             )
         },
     ) { padding ->
