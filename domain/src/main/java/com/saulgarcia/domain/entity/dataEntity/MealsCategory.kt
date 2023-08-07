@@ -1,4 +1,4 @@
-package com.saulgarcia.domain.entity
+package com.saulgarcia.domain.entity.dataEntity
 
 data class MealsCategory(
     val id: Int? = null,
