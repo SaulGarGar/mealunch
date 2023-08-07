@@ -5,7 +5,7 @@ import com.saulgarcia.domain.repository.MealsCategoryRepository
 import javax.inject.Inject
 
 class GetCategoriesUseCase @Inject constructor(private val mealsRepository: MealsCategoryRepository){
-    fun invoke(): Either {
+    operator fun invoke(): Either {
         return mealsRepository.getMealsCategories()
     }
 }

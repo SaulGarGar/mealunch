@@ -13,7 +13,7 @@ class MealsCategoryRepositoryImpl @Inject constructor (private val client: TheMe
         val response = client.getMealCategories().execute()
         if (response.isSuccessful) {
             response.body()?.let { body ->
-                Either.Success (body.toMealsCategory())
+                Either.Success(body.mealsCategories.map { it.toMealsCategory() })
             } ?: Either.Error(ErrorEntity.EmptyResponseError)
         } else {
             Either.Error(ErrorEntity.NetworkError(response.code()))
