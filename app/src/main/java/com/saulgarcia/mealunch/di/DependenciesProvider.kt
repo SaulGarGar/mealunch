@@ -1,4 +1,4 @@
-package com.saulgarcia.mealunch
+package com.saulgarcia.mealunch.di
 
 import dagger.Module
 import dagger.Provides

@@ -1,6 +1,6 @@
 package com.saulgarcia.data.di
 
-import com.saulgarcia.data.remote.repository.MealsCategoryRepositoryImpl
+import com.saulgarcia.data.repository.MealsCategoryRepositoryImpl
 import com.saulgarcia.domain.repository.MealsCategoryRepository
 import dagger.Binds
 import dagger.Module

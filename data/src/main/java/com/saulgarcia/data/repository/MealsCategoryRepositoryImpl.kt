@@ -1,4 +1,4 @@
-package com.saulgarcia.data.remote.repository
+package com.saulgarcia.data.repository
 
 import com.saulgarcia.domain.entity.action.Either
 import com.saulgarcia.domain.entity.action.error.ErrorEntity
