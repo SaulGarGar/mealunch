@@ -1,8 +1,8 @@
-package com.saulgarcia.data.entity
+package com.saulgarcia.data.entity.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class MealsCategoryResponse(
+data class MealsCategoryDto(
     @SerializedName("idCategory")
     val id: Int? = null,
     @SerializedName("strCategory")

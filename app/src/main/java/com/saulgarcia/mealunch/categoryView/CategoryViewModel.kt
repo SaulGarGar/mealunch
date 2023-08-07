@@ -19,7 +19,7 @@ class CategoryViewModel @Inject constructor(
         viewModelScope.launch(coroutineContext) {
             when (val result = getCategoriesUseCase()) {
                 is Either.Success -> {
-                    result.getData<MealsCategory>()
+                    result.getData<List<MealsCategory>>()
                 }
                 is Either.Error -> {
                     result.error
