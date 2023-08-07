@@ -1,8 +1,8 @@
-package com.saulgarcia.data.repository
+package com.saulgarcia.data.remote.repository
 
 import com.saulgarcia.domain.entity.action.Either
 import com.saulgarcia.domain.entity.action.error.ErrorEntity
-import com.saulgarcia.data.mapper.toMealsCategory
+import com.saulgarcia.data.remote.mapper.toMealsCategory
 import com.saulgarcia.data.remote.TheMealApiClient
 import com.saulgarcia.domain.repository.MealsCategoryRepository
 import javax.inject.Inject

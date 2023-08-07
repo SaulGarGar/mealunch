@@ -1,7 +1,7 @@
-package com.saulgarcia.data.entity.response
+package com.saulgarcia.data.remote.entity.response
 
 import com.google.gson.annotations.SerializedName
-import com.saulgarcia.data.entity.dto.MealsCategoryDto
+import com.saulgarcia.data.remote.entity.dto.MealsCategoryDto
 
 data class GetMealsCategoryResponse(
     @SerializedName("categories")
