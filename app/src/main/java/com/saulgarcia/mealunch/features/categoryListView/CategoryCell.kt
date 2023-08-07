@@ -1,6 +1,7 @@
-package com.saulgarcia.mealunch.ui.categoryView
+package com.saulgarcia.mealunch.features.categoryListView
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -14,15 +15,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.saulgarcia.domain.entity.dataEntity.MealsCategory
+import com.saulgarcia.mealunch.navigation.Routes
 
 @Composable
-fun CategoryCell(category: MealsCategory) {
+fun CategoryCell(category: MealsCategory, navController: NavController) {
     Row(
-        modifier = Modifier.padding(8.dp)
+        modifier = Modifier
+            .padding(8.dp)
+            .clickable {
+                navController.navigate(
+                    route = Routes.MealsListScreen.createRoute(category.name ?: "")
+                )
+            }
     ) {
         AsyncImage(
             model = category.imageUrl,
@@ -55,17 +63,4 @@ fun CategoryCell(category: MealsCategory) {
             }
         }
     }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewCategoryCell() {
-    val mockCategory = MealsCategory(
-        id = 1,
-        imageUrl = "",
-        name = "Tacos",
-        description = "I love tacos"
-    )
-
-    CategoryCell(category = mockCategory)
 }

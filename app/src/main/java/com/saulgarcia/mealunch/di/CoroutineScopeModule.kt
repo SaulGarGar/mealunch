@@ -10,7 +10,7 @@ import kotlin.coroutines.CoroutineContext
 
 @Module
 @InstallIn(SingletonComponent::class)
-object DependenciesProvider {
+object CoroutineScopeModule {
     @Provides
     @Singleton
     fun provideIOCoroutineContext(): CoroutineContext {
